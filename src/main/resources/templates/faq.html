@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${pageTitle}">FAQ</title>
+
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet">
+
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+        <a class="navbar-brand fw-bold" th:href="@{/}">Help Desk</a>
+
+        <div class="navbar-nav">
+            <a class="nav-link" th:href="@{/}">Главная</a>
+            <a class="nav-link" th:href="@{/about}">О нас</a>
+            <a class="nav-link" th:href="@{/contacts}">Контакты</a>
+            <a class="nav-link active" th:href="@{/faq}">FAQ</a>
+        </div>
+    </div>
+</nav>
+
+<main class="container py-5">
+
+    <h1 class="fw-bold mb-4" th:text="${pageTitle}">
+        FAQ
+    </h1>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+
+            <table class="table table-striped align-middle mb-0">
+                <thead>
+                <tr>
+                    <th>Вопрос</th>
+                    <th>Ответ</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr>
+                    <td>Как создать заявку?</td>
+                    <td>Перейдите в раздел "Обращения" (в следующих модулях) и заполните форму.</td>
+                </tr>
+
+                <tr>
+                    <td>Как связаться с поддержкой?</td>
+                    <td>Используйте email или телефон в разделе "Контакты".</td>
+                </tr>
+
+                <tr>
+                    <td>Как изменить пароль?</td>
+                    <td>Функция появится в личном кабинете в следующих модулях.</td>
+                </tr>
+
+                <tr>
+                    <td>Сколько обрабатывается заявка?</td>
+                    <td>Обычно от 1 до 24 часов в зависимости от приоритета.</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="alert alert-info mt-4">
+        Здесь отображаются часто задаваемые вопросы пользователей.
+    </div>
+
+    <a class="btn btn-outline-primary" th:href="@{/}">
+        Вернуться на главную
+    </a>
+
+</main>
+
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+</body>
+</html>
