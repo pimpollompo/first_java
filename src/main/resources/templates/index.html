@@ -18,6 +18,8 @@
             <a class="nav-link" th:href="@{/about}">О нас</a>
             <a class="nav-link" th:href="@{/contacts}">Контакты</a>
             <a class="nav-link" th:href="@{/tickets}">Заявки</a>
+            <a class="nav-link" th:href="@{/tickets/new}">Создать заявку</a>
+            <a class="nav-link" th:href="@{/admin/tickets}">Админ-панель</a>
         </div>
     </div>
 </nav>
@@ -36,6 +38,9 @@
             </a>
             <a class="btn btn-outline-secondary btn-lg" th:href="@{/contacts}">
                 Связаться с поддержкой
+            </a>
+            <a th:href="@{/login}" class="btn btn-outline-primary">
+                Войти как администратор
             </a>
         </div>
     </section>
